@@ -1,5 +1,5 @@
 import numpy as np
-def LUgauss(A):
+def LUgauss(A):                          #Both L and U matrices stored together for efficient storage
     n = len(A)
     for i in range(0,n-1):
         for j in range(i+1,n):
