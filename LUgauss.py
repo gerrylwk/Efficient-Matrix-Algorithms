@@ -5,7 +5,7 @@ def LUgauss(A):                             #Both L and U matrices stored togeth
         for j in range(i+1,n):
             A[j][i] = A[j][i]/A[i][i]
             for k in range(i+1,n):
-                A[j][k] = A[j][k] - A[j][i] * A[i][k]
+                A[j][k] -= A[j][i] * A[i][k]
 
     print(A)
     return(A)
