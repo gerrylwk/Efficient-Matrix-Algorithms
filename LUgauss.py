@@ -8,6 +8,7 @@ def LUgauss(A):                             #Both L and U matrices stored togeth
                 A[j][k] = A[j][k] - A[j][i] * A[i][k]
 
     print(A)
+    return(A)
 
 matA = [[1,2,3],[3,4,7],[6,5,9]]         #example input
 LUgauss(matA)
