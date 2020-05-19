@@ -2,9 +2,9 @@ import numpy as np
 def LUupperhess(A):
     n = len(A)
     for i in range(0,n-1):
-        A[i+1][i] = A[i+1][i] / A[i][i]
+        A[i+1][i] /= A[i][i]
         for j in range(i+1,n):
-            A[i+1][j] = A[i+1][j] - A[i+1][i] * A[i][j]
+            A[i+1][j] -= A[i+1][i] * A[i][j]
 
     print(A)
     return(A)
