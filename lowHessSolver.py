@@ -20,6 +20,7 @@ def lowHessSolver(A,b):                     #Ax = b
             x[i] = x[i] - A[r[i]][j] * x[j]
         x[i] = x[i] / A[r[i]][i]
     print(x)
+    return(x)
 
 Atest = np.array([[1,2,0],[2,3,5],[4,1,1]])
 btest = np.array([5,23,9])
