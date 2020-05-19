@@ -2,8 +2,8 @@ import numpy as np
 def LUtridiag(A):                               #O(n) time complexity
     n = len(A)
     for i in range(0,n-1):
-        A[i+1][i] = A[i+1][i] / A[i][i]
-        A[i+1][i+1] = A[i+1][i+1] - A[i+1][i] * A[i][i+1]
+        A[i+1][i] /= A[i][i]
+        A[i+1][i+1] -= A[i+1][i] * A[i][i+1]
 
     print(A)
     return(A)
