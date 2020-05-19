@@ -4,7 +4,7 @@ def LUlowerhess(A):
     for i in range(0,n-1):
         for j in range(i+1,n):
             A[j][i] = A[j][i] / A[i][i]
-            A[j][i+1] = A[j][i+1] - A[j][i] * A[i][i+1]
+            A[j][i+1] -= A[j][i] * A[i][i+1]
 
     print(A)
     return(A)
