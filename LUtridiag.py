@@ -6,6 +6,7 @@ def LUtridiag(A):                               #O(n) time complexity
         A[i+1][i+1] = A[i+1][i+1] - A[i+1][i] * A[i][i+1]
 
     print(A)
+    return(A)
 
 matA = [[1,2,0],[3,4,7],[0,5,9]]         #example input
 LUtridiag(matA)
