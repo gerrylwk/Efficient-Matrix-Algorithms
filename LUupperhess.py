@@ -6,8 +6,8 @@ def LUupperhess(A):
         for j in range(i+1,n):
             A[i+1][j] = A[i+1][j] - A[i+1][i] * A[i][j]
 
-
     print(A)
+    return(A)
 
 matA = [[1,2,3],[3,4,7],[0,5,9]]         #example input
 LUupperhess(matA)
