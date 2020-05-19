@@ -7,6 +7,7 @@ def LUlowerhess(A):
             A[j][i+1] = A[j][i+1] - A[j][i] * A[i][i+1]
 
     print(A)
+    return(A)
 
 matA = [[1,2,0],[3,4,7],[6,5,9]]         #example input
 LUlowerhess(matA)
