@@ -3,7 +3,7 @@ def LUgauss(A):                             #Both L and U matrices stored togeth
     n = len(A)
     for i in range(0,n-1):
         for j in range(i+1,n):
-            A[j][i] = A[j][i]/A[i][i]
+            A[j][i] /= A[i][i]
             for k in range(i+1,n):
                 A[j][k] -= A[j][i] * A[i][k]
 
