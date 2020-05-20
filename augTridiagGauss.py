@@ -9,7 +9,7 @@ def augTridiagGauss(A):
         if j == n+1:
             print("Error. Matrix is singular.")
         elif j != i:
-            r[i] = r[j], r[j] = r[i]
+            r[i],r[j] = r[j],r[i]
     for i in range(0,n-1):
         m = A[r[i+1]][i] / A[r[i]][i]
         A[r[i+1]][i+1] -= m * A[r[i]][i+1]
@@ -19,9 +19,9 @@ def augTridiagGauss(A):
     x[n-1] = A[r[n-1]][n] / A[r[n-1]][n-1]
     for k in range(n-2,-1,-1):
         x[k] = ( A[r[k]][n] - A[r[k]][k+1]*x[k+1] )/ A[r[k]][k]
-
+        x[k] = round(x[k],7)
     print(x)
     return(x)
 
-atest = [[2,3,0,0,21],[6,3,9,0,69],[0,2,5,2,34],[0,0,4,3,22]]
+atest = np.array([[2,3,0,0,21],[6,3,9,0,69],[0,2,5,2,34],[0,0,4,3,22]],dtype=float)
 augTridiagGauss(atest)      #x = 3,5,4,2
