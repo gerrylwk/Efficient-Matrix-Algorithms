@@ -15,11 +15,12 @@ def augGauss(mat):                     #Gaussian for general matrix
             x[i] -= mat[i][j]*x[j]
 
         x[i] = x[i]/mat[i][i]
+        x[i] = round(x[i],7)
     print(x)
     return(x)
 
 
-matA = [[1,2,3,0],[3,4,7,2],[6,5,9,11]]         #example input
+matA = np.array([[1,2,3,0],[3,4,7,2],[6,5,9,11]],dtype=float)         #example input
 augGauss(matA)                    #4,1,-2
 
 
