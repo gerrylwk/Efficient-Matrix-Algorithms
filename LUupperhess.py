@@ -9,7 +9,7 @@ def LUupperhess(A):
     print(A)
     return(A)
 
-matA = [[1,2,3],[3,4,7],[0,5,9]]         #example input
+matA = np.array([[1,2,3],[3,4,7],[0,5,9]],dtype=float)         #example input
 LUupperhess(matA)
 
 #Example output:  matA = [[1, 2,  3],               [[1,0, 0],       [[1,  2,  3],
