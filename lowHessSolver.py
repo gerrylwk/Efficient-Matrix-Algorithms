@@ -10,7 +10,7 @@ def lowHessSolver(A,b):                     #Ax = b
                 A[r[i-1]][k] -= m * A[r[i]][k]
             b[r[i-1]] -= m * b[r[i]]
         else:
-            r[i] = r[i-1], r[i-1] = r[i]
+            r[i],r[i-1] = r[i-1],r[i]
 
     x = np.zeros(n)
     x[0] = b[r[0]] / A[r[0]][0]
@@ -22,8 +22,8 @@ def lowHessSolver(A,b):                     #Ax = b
     print(x)
     return(x)
 
-Atest = np.array([[1,2,0],[2,3,5],[4,1,1]])
-btest = np.array([5,23,9])
+Atest = np.array([[1,2,0],[2,3,5],[4,1,1]],dtype=float)
+btest = np.array([5,23,9],dtype=float)
 #Result is x = [1,2,3]
 #Example below
 lowHessSolver(Atest,btest)
