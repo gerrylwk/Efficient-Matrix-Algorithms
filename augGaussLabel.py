@@ -9,7 +9,7 @@ def augGaussLabel(A):               #Gaussian with row labels, to prevent
         if j == n:
             print("Error. Matrix is singular.")
         elif j != i:
-            r[i] = r[j], r[j] = r[i]
+            r[i],r[j] = r[j],r[i]
         for j in range(i+1,n):
             m = A[r[j]][i]/A[r[i]][i]
             for k in range(i+1,n+1):
@@ -23,9 +23,10 @@ def augGaussLabel(A):               #Gaussian with row labels, to prevent
             x[i] -= A[r[i]][j] * x[j]
 
         x[i] = x[i] / A[r[i]][i]
+        x[i] = round(x[i],7)
     print(x)
     return(x)
 
 
-A = [[1,2,3,0],[3,4,7,2],[6,5,9,11]]         #example input
+A = np.array([[1,2,3,0],[3,4,7,2],[6,5,9,11]],dtype=float)         #example input
 augGaussLabel(A)                    #4,1,-2
