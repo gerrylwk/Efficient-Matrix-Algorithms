@@ -59,7 +59,7 @@ def gaussPP(A,b,scaled='pp'):                   #Ax = b
         x[i] = round(x[i],7)                           #Rounding based on 7 decimal places
 
     print(x)
-
+    return(x)
 
 
 Atest = np.array([[2,-3,2],[-4,2,-6],[2,2,1]],dtype = float)      #Add dtype = float to prevent rounding operations
