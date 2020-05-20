@@ -19,6 +19,7 @@ def lowHessSolver(A,b):                     #Ax = b
         for j in range(0,i):
             x[i] -= A[r[i]][j] * x[j]
         x[i] /= A[r[i]][i]
+        x[i] = round(x[i],7)
     print(x)
     return(x)
 
